@@ -6,16 +6,16 @@ To start:
 # Pre-Requisites
 
 1. NodeJS
-2. npm
+2. Yarn
 
 # Running app
 
-1. `npm i`
-2. `npm start`
+1. `yarn`
+2. `yarn run start`
 
 # Building
 
-1. `npm run build`
+1. `yarn run build`
 
 # Features
 
@@ -25,3 +25,12 @@ To start:
 4. Storybook
 5. Eslint
 6. Prettier running as a lint rule
+
+# Environment variables
+### ```REACT_APP_ENVIRONMENT```
+Not the same thing as ```process.env.NODE_ENV```, set this so that Sentry knows the difference between develop, staging and productionenvironments.
+As far as ```process.env.NODE_ENV``` is concerned, run build meansthat it's production.
+
+
+### ```REACT_APP_SENTRY_DSN```
+DSN from sentry.

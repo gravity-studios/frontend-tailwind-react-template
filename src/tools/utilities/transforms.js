@@ -33,7 +33,6 @@ const validationMessages = {
 
 const loadingKey = {
     default: 'default',
-    PROJECT_NAMELarge: 'PROJECT_NAMELarge',
     quote: 'quote',
 };
 
