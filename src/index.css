@@ -162,7 +162,7 @@
         @apply w-full h-14;
     }
     .btn.primary {
-        @apply text-base text-green-PROJECT_NAME border-green-PROJECT_NAME hover:bg-green-PROJECT_NAME hover:text-white;
+        @apply text-base text-green border-green hover:bg-green hover:text-white;
     }
     .btn.primary.disabled {
         @apply border-none bg-green-pale text-green-disabled hover:bg-green-pale hover:text-green-disabled cursor-default;
@@ -235,13 +235,13 @@
         @apply rounded-full w-5 h-5 border-2 border-blue-gray-medium flex text-center items-center justify-center;
     }
     .radio-button input:checked + .radio-control {
-        @apply border-green-PROJECT_NAME;
+        @apply border-green;
     }
     .radio-button input:checked + .radio-control span {
-        @apply rounded-full w-3 h-3 bg-green-PROJECT_NAME opacity-100;
+        @apply rounded-full w-3 h-3 bg-green opacity-100;
     }
     .radio-button .radio-control span {
-        @apply rounded-full w-3 h-3 bg-green-PROJECT_NAME opacity-0;
+        @apply rounded-full w-3 h-3 bg-green opacity-0;
     }
 
     /* Typography */
@@ -280,7 +280,7 @@
         @apply border-b-2 border-gray-light-outline w-full my-5;
     }
     .link-green {
-        @apply text-green-PROJECT_NAME font-bold text-base hover:text-green-washed;
+        @apply text-green font-bold text-base hover:text-green-washed;
     }
     .nav-item {
         @apply text-blue-gray hover:text-blue-gray-medium font-semibold;

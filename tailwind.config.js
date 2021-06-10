@@ -17,6 +17,7 @@ module.exports = {
                     pale: '#FDFEFE',
                 },
                 green: {
+                    DEFAULT: '#8EC665',
                     bright: '#8EC665',
                     pale: '#F4FBF6',
                     disabled: '#A1C4AB',
