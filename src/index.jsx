@@ -1,7 +1,6 @@
 import React from 'react';
 import { Integrations } from '@sentry/tracing';
 import * as Sentry from '@sentry/react';
-import TagManager from 'react-gtm-module';
 import { Provider } from 'react-redux';
 import ReactDOM from 'react-dom';
 import './index.css';
@@ -10,21 +9,14 @@ import reportWebVitals from './reportWebVitals';
 import store from './tools/redux/store';
 import SomethingWentWrong from './components/common/SomethingWentWrong';
 
-if (process.env.REACT_APP_SENTRY_DSN) {
+if (!process.env.NODE_ENV || process.env.NODE_ENV !== 'development') {
     Sentry.init({
+        environment: process.env.REACT_APP_ENVIRONMENT,
         dsn: process.env.REACT_APP_SENTRY_DSN,
         integrations: [new Integrations.BrowserTracing()],
-        release: `${'my-project-name@'} + ${process.env.npm_package_version}`,
-        tracesSampleRate: 0.5,
+        release: process.env.npm_package_version,
+        tracesSampleRate: process.env.NODE_ENV === 'production' ? 0.5 : 1.0,
     });
-}
-
-if (process.env.REACT_APP_GTM_ID) {
-    const tagManagerArgs = {
-        gtmId: process.env.REACT_APP_GTM_ID,
-    };
-
-    TagManager.initialize(tagManagerArgs);
 }
 
 ReactDOM.render(

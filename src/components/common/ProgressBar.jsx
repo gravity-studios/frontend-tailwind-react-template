@@ -58,7 +58,7 @@ const ProgressBar = ({ completedPercentage = 1, mode = loadingModes.auto }) => {
             {mode === loadingModes.manual && (
                 <div className="flex flex-row w-1/3 h-1">
                     <div
-                        className={`bg-green-PROJECT_NAME ${getCompleteBarWidth(
+                        className={`bg-green ${getCompleteBarWidth(
                             completedPercentage,
                         )}`}
                     />
